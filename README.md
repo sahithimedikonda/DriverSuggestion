@@ -46,6 +46,7 @@ Driver Suggestion API Call:
 
       
  ###########################################################################################################
+ # Note
  Ideal State was to place springboot into docker which but bellow is the reason i moved to seperating it out.
  Below is the block included in docker-compose.yml to deploy microservices but it DID NOT work. Getting "ERROR: Producer Broker not available. Could not connect"
     
