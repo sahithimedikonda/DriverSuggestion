@@ -27,9 +27,26 @@ or
 Run Spring Boot app using Maven:
 
     mvn spring-boot:run
+    
+
+
+# Postman API Outcomes
+
+Store API Call:
+
+![image](https://user-images.githubusercontent.com/62857432/123710155-d990a880-d833-11eb-8694-1b37ec69d6f5.png)
+
+Driver API Call:
+
+![image](https://user-images.githubusercontent.com/62857432/123710234-fcbb5800-d833-11eb-8e23-12c8f5355d85.png)
+
+Driver Suggestion API Call:
+
+![image](https://user-images.githubusercontent.com/62857432/123710379-42782080-d834-11eb-813c-38e5b97b9282.png)
+
       
  ###########################################################################################################
-    
+ Ideal State was to place springboot into docker which but bellow is the reason i moved to seperating it out.
  Below is the block included in docker-compose.yml to deploy microservices but it DID NOT work. Getting "ERROR: Producer Broker not available. Could not connect"
     
     driver-suggestion-container:
