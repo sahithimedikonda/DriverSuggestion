@@ -27,4 +27,30 @@ or
 Run Spring Boot app using Maven:
 
     mvn spring-boot:run
+      
+ ###########################################################################################################
+    
+ Below is the block included in docker-compose.yml to deploy microservices but it DID NOT work. Getting "ERROR: Producer Broker not available. Could not connect"
+    
+    driver-suggestion-container:
+    image: driver-suggestion-container
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/db?autoReconnect=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: "user"
+      SPRING_DATASOURCE_PASSWORD: "user123"
+    build:
+      context: "./"
+      dockerfile: "DockerFile"
+    depends_on:
+      - db
+      - kafka
+      - zookeeper
+    links:
+      - db
+      - kafka
+      - zookeeper
+    networks:
+      - app-tier
     
