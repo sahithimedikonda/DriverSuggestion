@@ -4,7 +4,8 @@ Driver suggestions project which uses Microservices, Docker and Kafka
 - Kafka, Zookeeper and MySQL are run using Docker-Compose
 
 Step-1: 
-Start Docker compose by running:  docker-compose up
+Start Docker compose by running: 
+```docker-compose up```
 
 Step-2:
 Miscroservices are currently not started by docker so these microservices needs to be started manually after docker is started.
